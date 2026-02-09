@@ -20,7 +20,6 @@ Three submissions related to in-class activities to gain practice with Git conce
 Students will become familiar with: 
 * The importance of reproducibility
 * Best practices in collaborating
-* ???
 
 ### Assignments
-TBD
+Two submissions, one to review the reproducibility of existing published work and one to practice collaborative skills in GitHub.
