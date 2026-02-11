@@ -1,0 +1,6 @@
+sample_id,treatment_group,num_cells,technician
+f85,A,1345,Tav
+c975,B,724,Tav
+e399,A,0,Tav
+c77,control,2846,Tav
+e887,control,0,Tav
