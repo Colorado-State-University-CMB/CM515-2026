@@ -142,7 +142,7 @@ Use protein prediction and analysis tools to explore and summarize information a
 * Any other figures or analyses relevant to your specific question(s)
 * A GitHub repo with files containing all code you wrote related to this project
 * A README for the repo
-    * At a minimum, it should describe your project goals and the paper you are exploring. If you want, your entire writeup can be complied here
+    * At a minimum, it should describe your project goals and the protein family you are exploring. If you want, your entire writeup can be complied here
 * A writeup with brief background about what is known about the protein family, which questions you decided to investigate, what inspired those questions, and your methods and progress towards summarizing your findings.
     * A summary of what is currently known and published about the protein family of choice - sequence data and/or structures, known or suspected functions, how common these proteins are across taxa, etc.
     * A description of your question(s) about the protein family and why the question(s) are interesting
