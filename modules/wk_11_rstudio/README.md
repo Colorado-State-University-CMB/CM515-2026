@@ -8,7 +8,8 @@
 
 ----
 
-**Instructor:** Owen Bevis, Melea Barahona, Carol Wilusz 
+**Instructors:** Owen Bevis, Melea Barahona, Carol Wilusz
+
 **Material Provided by:** Erin Osborne Nishimura Ph.D.
 
 **Dates:** Monday April 6, 2026 & Wednesday April 8, 2026
@@ -30,11 +31,11 @@ We will explore the basics of **R**. What is R?
 
 ## Learning objectives for this module
 
-  1. Students will describe the differences between R and Python **Carol/Melea**
-  3. Students will learn about R: it's **history** and how it is **useful in biological research**
-  4. Students will learn how to **interface** with R and RStudio including using Github for version control.
-  5. Students will become familiar with a few basic **R objects** (or extend their knowledge into new objects)
-  6. Students will execute a few basic **R functions** (or extend their knowledge into new functions)
+  1. Students will describe the differences between R and Python **Carol**
+  3. Students will learn about R: it's **history** and how it is **useful in biological research**  **Carol**
+  4. Students will learn how to **interface** with R and RStudio including using Github for version control. **Melea**
+  5. Students will become familiar with a few basic **R objects** (or extend their knowledge into new objects) **Owen**
+  6. Students will execute a few basic **R functions** (or extend their knowledge into new functions) **Owen**
   
 ## Next:
   * Students will learn to **import and export** data
