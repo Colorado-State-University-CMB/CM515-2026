@@ -8,7 +8,7 @@ RStudio is an **Integrated Development Environment** or **IDE**. An IDE is a sof
 
 :white_check_mark: **GRAPHICAL SUMMARY:**
 
-<img src="webContent/WebContent_Powerpoint_interface.jpg" width="1200">
+<img src="webContent/RStudioInterface.png" width="1200">
 
 
 
@@ -18,7 +18,7 @@ RStudio is an **Integrated Development Environment** or **IDE**. An IDE is a sof
   * **Files panel** - This gives you the ability to browse and interact with the file structure on your own local computer.
   * **Help panel** - This will pop up with useful help information when you execute the help command. More on that later.
   * **Plots panel** - this is where plots and graphics will appear when we generate them.
-  * **Github panel** - this is where you see what changed, commit changes, push updates to Github and pull changes from the remote repository
+  * **Git panel** - this is where you see what changed, commit changes, push updates to Github and pull changes from the remote repository
   * We can toggle through panels behind the Console, Environment, and Plot panels using the tabs at the top of the window.
 
 -----
