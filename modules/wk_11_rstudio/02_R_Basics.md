@@ -40,7 +40,7 @@
 <img src="webContent/Founders.jpeg" width="600">
 
   * 1976 - Bell Labs develops S, an open-source statistical programming language. The team was led by John Chambers.
-  * 1991 - Ross Ihaka and Robert Gentleman at the University of Aukland in New Zealand embarks on a research venture to adapt S into R. 
+  * 1991 - Ross Ihaka and Robert Gentleman at the University of Auckland in New Zealand embarks on a research venture to adapt S into R. 
     * Motivated to create a better user experience for academics
   * 1995 - first official beta release
   * 1997 - CRAN (Comprehensive R Archive Network) distributes R packages
@@ -48,7 +48,7 @@
   * 2000 - R 1.0.0 is released 
   * 2011 - R versions start getting funny nicknames. R 2.14.0 Great Pumpkin
   * 2010 - CRAN exceeds 10,000 published packages!
-  * 2025 - R's latest version is 4.4.2 "Pile of Leaves"
+  * 2025 - R's latest version is 4.5.3 "Reassured Reassurer"
   * [R-bloggers](https://www.r-bloggers.com/) - great for keeping up with new developments
 
 R is now a large, diverse community of users and developers. Here is a picture from the 2018 New York R conference courtesy of R-Bloggers:
@@ -61,11 +61,14 @@ R is now a large, diverse community of users and developers. Here is a picture f
 
 ❓ Why do we use any programming language in biology? 
 
-❓ Why use R in particular? What are its benefits for the life sciences?
+❓ Why use R in particular? What are its benefits for the life sciences?  How is it different / better than Python?
+
+## R versus Python
+
 
 ## Bioconductor
 
-[Bioconductor](https://www.bioconductor.org/) serves as a repository for life science relevant R packages
+[Bioconductor](https://www.bioconductor.org/) serves as an open source repository for life science relevant R packages - particularly omics packages
 
 ## HOMEWORK QUESTION 1 (5 pts) 
 
