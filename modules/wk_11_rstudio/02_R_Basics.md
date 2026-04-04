@@ -71,11 +71,11 @@ R is now a large, diverse community of users and developers. Here is a picture f
 |--------------|------------|-------|
 | Ease of Learning | Easy | Moderate |
 | Versatility | Strong | Limited |
-| Statistics | Good (with libraries) | Excellent |
-| Data Visualization | Good (with libraries) | Excellent (ggplot2) |
+| Statistics | Good (pandas, scipy) | Excellent |
+| Data Visualization | Good (matplotlib, seaborn) | Excellent (ggplot2) |
 | Community | Large and Active | Large and Active |
 | Open-source | Yes | Yes |
-| Cross-platform | Yes | Yes |
+| Cross-platform (mac,PC, linux| Yes | Yes |
 
 From [geeks4geeks](https://www.geeksforgeeks.org/blogs/r-vs-python-which-is-easier-to-learn/)
 
