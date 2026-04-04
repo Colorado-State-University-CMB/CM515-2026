@@ -75,7 +75,7 @@ R is now a large, diverse community of users and developers. Here is a picture f
 | Data Visualization | Good (matplotlib, seaborn) | Excellent (ggplot2) |
 | Community | Large and Active | Large and Active |
 | Open-source | Yes | Yes |
-| Cross-platform (mac,PC, linux| Yes | Yes |
+| Cross-platform (mac/PC/linux)| Yes | Yes |
 
 From [geeks4geeks](https://www.geeksforgeeks.org/blogs/r-vs-python-which-is-easier-to-learn/)
 
