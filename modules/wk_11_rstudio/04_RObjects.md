@@ -285,6 +285,12 @@ Notice how `dim` shows you the dimensions of the object model_systems.
 head(model_systems)
 ```
 
+  * **Tail** - We can also force only the very bottom of a data frame to be displayed using `tail()`:
+
+```r
+tail(model_systems)
+```
+
   * **Columns** - We can pull out specific columns of data using a special syntax that involves the special character **$** like so:
 
 ➡️ **FOLLOW ALONG**
