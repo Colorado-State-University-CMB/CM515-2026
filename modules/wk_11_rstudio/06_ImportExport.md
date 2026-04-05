@@ -147,8 +147,6 @@ summary(lifeExp)
 
 ```
 
-Screenshot 2025-02-05 at 8.03.22 AM
-
 ## Reviewing importing steps 
 
 Just to review, here are the basic steps of importing data...
@@ -181,7 +179,7 @@ Let's practice importing some data. Try to import your selected dataset to your 
 ----
 
 
-# Exporting Data out of R - Note - we will skip this today
+# Exporting Data out of R
 
 Next, I'll show you how to save data and plots we generate in R so they can be shared or published in reports, presentations, or publications.
 
@@ -238,6 +236,27 @@ write.table(lifeExpUS, file = "lifeExpectancy_USA.txt", quote = FALSE, sep = "\t
 ⚠️ **WARNING** Excel will automatically switch gene names to dates (ie: jun-1, oct-4). Use the **import** function in excel to specify the data type of each column to avoid this behavior.
 
   * **BONUS** - To export a vector object, use `write()` 
+
+
+➡️ Export using `write.csv()`
+
+First, let's look at what `write.csv()` does:
+
+```r
+help(write.csv)
+```
+
+Because `.csv` files are comma separated, this option is not necessary.
+
+```r
+write.csv(lifeExpUS, file = "lifeExpectancy_USA.csv")
+```
+
+I don't like how those numbers are included. We can remove them with `row.names = FLASE`:
+
+```r
+write.csv(lifeExpUS, file = "lifeExpectancy_USA.csv", row.names = FALSE)
+```
 
 ----- 
 
