@@ -44,7 +44,7 @@ library(viridis)
 #Let's install tidyverse
 install.packages("tidyverse")
 
-# Do this each time you want to use a viridis package:
+# Do this each time you want to use a tidyverse package:
 library(tidyverse)
 
 ```
