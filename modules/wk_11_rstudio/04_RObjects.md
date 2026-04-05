@@ -391,6 +391,78 @@ Turn in the amended code block.
 
 ----
 
+# List objects
+
+Lists are like the jack of all trades object in R. Lists can behave like vectors:
+
+```r
+L <- list("human", "mouse", "worm", "yeast", "maize")
+L
+str(L)
+```
+
+By now you know that vectors can only hold one data type at a time. Lists are not limited in this way, and can store many different data types. 
+
+```r
+L <- list("human", 23, factor(c("animalia")), FALSE)
+L
+str(L)
+```
+
+The most common use case I have found for lists, however, is to store data frames. You will notice in the code below that I am explicitly nameing each element of the list using the `=` operator; this will be important later. 
+
+```r
+animalia <- data.frame(
+  organism = organism[1:3],
+  chromosomes = chromosomes[1:3],
+  haploid = haploid[1:3]
+)
+animalia
+
+fungi <- data.frame(
+  organism = organism[4],
+  chromosomes = chromosomes[4],
+  haploid = haploid[4]
+)
+fungi
+
+plantae <- data.frame(
+  organism = organism[5],
+  chromosomes = chromosomes[5],
+  haploid = haploid[5]
+)
+plantae
+
+kingdoms <- list(animalia = animalia, fungi = fungi, plantae = plantae)
+kingdoms
+str(kingdoms)
+```
+
+## Subsetting lists
+Just like dataframes, lists can be subset using brackets and numbers. One important distinction, however, is that lists use double brackets instead of single, like this:
+
+```r
+kingdoms[[1]]
+```
+
+This returns the first element in the list, the `animalia` dataframe. But what if we wanted to subset further? We can do that by adding an additional set of square brackets.
+
+```r
+kingdoms[[1]][[1]]
+```
+
+This returns the first element of the list element `animalia`, which is the vector `"human" "mouse" "worm"`.  
+Using numbers like this can get comfusing very fast. Luckily, we can also subset lists using `$`.
+
+```r
+kingdoms$animalia
+```
+
+This can be chained together multiple times:
+
+```r
+kingdoms$animalia$organism
+```
 
 
 
