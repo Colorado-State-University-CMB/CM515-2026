@@ -35,7 +35,7 @@ points(lifeExp_byYear$Year,
 
 Compare your plot with the one generated in [Our World in Data](https://ourworldindata.org/data-insights/global-average-life-expectancy-has-more-than-doubled-since-1900)
 
-Mind looks like:
+Mine looks like:
 
 <img src="webContent/Screenshot 2025-02-05 at 8.32.43 AM.png" width="600">
 
