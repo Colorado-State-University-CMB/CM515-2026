@@ -123,6 +123,78 @@ mean(incompleteVector, na.rm = TRUE)
 
 ```
 
+
+## Writing your own functions
+
+Functions are created just like any other variable in R with the gets arrow:
+
+```r
+func <- function() {
+# code goes here
+}
+```
+Functions are then called using the name you have given it.
+
+```r
+greeting <- function() {
+  print("Hello world!")
+}
+
+greeting()
+```
+
+To make our functions actually useful, we can create arguments to pass objects into the function. This function takes a number and returns the number plus five.
+
+```r
+add_5 <- function(num) {
+  return(num + 5)
+}
+
+add_5(5)
+```
+
+Arguments are **required**, meaning this will not work:
+
+```r
+add_5()
+```
+
+However, we can give the function a default argument using the `=` operator:
+
+```r
+add_5 <- function(num = 0) {
+  return(num + 5)
+}
+
+add_5(5)
+add_5()
+```
+
+We can also give functions options. As the name implies, these are optional, and do not need to be specified in the function call. However, a default option **must** be specified at function creation.
+
+```r
+convert_temperature <- function(temp, unit = "farenheit") {
+  if(unit == "farenheit") {
+    temp <- (temp - 32) * 5/9
+    return(temp)
+  }
+  if (unit == "celcius") {
+    temp <- (temp * 9/5) + 32
+    return(temp)
+  }
+}
+
+convert_temperature(32)
+convert_temperature(0, unit = "celcius")
+```
+
+Just like regular functions, we can assign the output of a function to a variable.
+
+```r
+temp <- convert_temperature(-40, unit = "celcius")
+temp
+```
+
 **REVIEW**
 
   * R functions have parentheses
