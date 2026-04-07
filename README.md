@@ -29,8 +29,8 @@ Welcome to CM 515! Course materials will be made available here and on Canvas. U
 | 10 | Wed Apr 1 | [Image Analysis](https://github.com/Colorado-State-University-CMB/CM515-2026/tree/main/modules/wk_10_image_analysis) | CellProfiler/Python/WormLib | Rosi, Kelsey |
 | 11 | Mon Apr 6 | [R/R Studio](https://github.com/Colorado-State-University-CMB/CM515-2026/tree/main/modules/wk_11_rstudio) | R/R Studio | Owen,  Melea |
 | 11 | Wed Apr 8 | [R/R Studio](https://github.com/Colorado-State-University-CMB/CM515-2026/tree/main/modules/wk_11_rstudio) | R/R Studio | Owen, Melea |
-| 12 | Mon Apr 13 | [TidyR and Pipes](https://github.com/Colorado-State-University-CMB/CM515-2026/tree/main/modules/wk_12_tidyr) | R/R Studio | Shady |
-| 12 | Wed Apr 15 | [TidyR and Pipes](https://github.com/Colorado-State-University-CMB/CM515-2026/tree/main/modules/wk_12_tidyr) | R/R Studio | Shady |
+| 12 | Mon Apr 13 | [TidyR and Pipes](https://github.com/Colorado-State-University-CMB/CM515-2026/tree/main/modules/wk_12_tidyr) | R/R Studio | Shady, Meg |
+| 12 | Wed Apr 15 | [TidyR and Pipes](https://github.com/Colorado-State-University-CMB/CM515-2026/tree/main/modules/wk_12_tidyr) | R/R Studio | Shady, Meg |
 | 13 | Mon Apr 20 | [ggplot & Data Visualization](https://github.com/Colorado-State-University-CMB/CM515-2026/tree/main/modules/wk_13_ggplot) | R/R Studio | Alex |
 | 13 | Wed Apr 22 | [ggplot & Data Visualization](https://github.com/Colorado-State-University-CMB/CM515-2026/tree/main/modules/wk_13_ggplot) | R/R Studio | Alex |
 | 14 | Mon Apr 27 | [Plots in Presentation – ggtree, circos](https://github.com/Colorado-State-University-CMB/CM515-2026/tree/main/modules/wk_14_ggtree_circos) | R/R Studio | Dan Sloan |
