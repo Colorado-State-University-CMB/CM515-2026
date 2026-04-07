@@ -1,0 +1,240 @@
+---
+title: "TidyR-Day1"
+author: "Shady Kuster"
+date: "2026-03-31"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# Check if the package is not installed (! operator), then install and load it
+package_list <- c("dplyr", "readr", "tidyverse", "tidyr")
+
+for (pckg in package_list) {
+  if (!requireNamespace(pckg, quietly = TRUE)) {
+    install.packages(cpkg, dependencies = TRUE)
+  }
+  library(pckg, character.only = TRUE)
+}
+
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. 
+
+This .Rmd has been set to knit to HTML by default. You can change output type to a PDF if you have the required packages installed by using the drop down menu on Knit and selecting PDF. Install packages necessary for this:
+install.packages("rmarkdown")
+install.packages("tinytex")
+
+command + return / control + enter --> run a single line
+
+play button --> run all code in a code chunk
+
+triangle + line button --> run all previous code chunks
+
+```{r load data}
+# The data is part of the supplemental material released with the paper
+# Paper: https://onlinelibrary.wiley.com/doi/10.1111/ele.70296
+# Data and code: https://figshare.com/articles/journal_contribution/Sex_ratio_bias_triggers_demographic_suicide_in_a_dense_tortoise_population/30752687
+
+# It seems it is not possible to download programatically, therefore I am
+# downloading and unzipping the file into
+# data-raw/Sex_ratio_bias_triggers_demographic_suicide-main/R/input in two files
+# body_condition.csv and clutch_size.csv
+
+#Step 1: download data file into your current working directory 
+#best to make cwd a new folder for this week's class!
+getwd()
+
+
+# Read in body_condition.csv
+tortoise_body_condition <- readr::read_csv(
+  "Sex_ratio_bias_triggers_demographic_suicide-main/R/input/body_condition.csv"
+)
+
+# read in clutch_size.csv
+clutch_size <- readr::read_csv(
+  "Sex_ratio_bias_triggers_demographic_suicide-main/R/input/clutch_size.csv"
+)
+
+
+```
+## Body Condition Data Exploration
+
+Great! We read it in! But what does this data look like? How did the authors format it?
+
+```{r check body cond out}
+#how did R format the dataset?
+
+
+#what are the column names of the dataset?
+
+
+#what does the data look like?
+
+
+
+
+```
+
+Based on that, let's fix the following to make our data tidy:
+
+* 1. remove the '...1' column, which appears to be a row counting column
+
+* 2. remove the 'res' column, since it's probably residuals from a model used for the paper
+
+* 3. remove the 'loc_sex_cohort' column, since this info is coded in 'loc' and 'sex'
+
+* 4. remove the log_BCI column
+
+In addition, let's make it look cleaner for us to use by:
+
+* 5. group the data by individual
+
+* 6. sort the data by year_recode
+
+* 7. rename columns so we know what they are more easily
+
+* 8. change order of columns
+
+* 9. expand the 'locality' column values to make them readily understandable
+
+* 10. change season from abbreviated form to full form
+
+
+```{r clean body cond}
+
+#fixing 1, 2, 3, and 4 (removing unwanted columns)
+#look at what we have
+
+#change it
+
+#did it do what we wanted?
+
+#fix 5 -- grouping by individual
+#look at our whole dataframe
+
+#how many rows belong to individual 1?
+
+#how many rows belong to each individual?
+
+
+#fix 6 -- sorting by year_recode
+#not currently ordered:
+
+#did this fix it?
+
+#fix 7 -- rename columns
+#check current state. what do the abbreviations mean? --> have to get from paper
+#did this fix it?
+
+#fix 8 -- change order of columns
+#what is the current order?
+#did this fix it?
+
+#fix 9 -- recode 'locality' column values
+#what are all options of loc?
+#did this fix it?
+
+#fix 10 -- recode 'season' column values
+#what are all options of season?
+#did this fix it?
+
+
+#save cleaned df to a new object
+tortoise_body_condition_cleaned <- tortoise_body_condition 
+
+```
+
+## Clutch Size Data Exploration
+
+Good work! Now let's look at our second dataset, the clutch size dataframe. 
+
+```{r check clutch out}
+#how did R format the dataset?
+
+#what are the column names of the dataset?
+
+#what does the data look like?
+
+```
+
+
+Sweet. Now, let's change some things:
+
+* 1. rename columns: 
+ind should be individual
+Locality should be locality
+SCL should be straight_carapace_length_mm
+BM should be body_mass_grams
+Eggs should be eggs
+Date should be date
+Age should be age
+
+* 2. Change the data type of the 'date' column to a Date data type
+
+* 3. Reorder the columns to this order:  individual,
+    age,
+    date,
+    locality,
+    eggs,
+    body_mass_grams,
+    straight_carapace_length_mm
+    
+
+That's it for this one! Try it on your own by responding to the comments below:
+
+```{r clean clutch}
+
+# fix 1 -- rename columns
+#what are the current column names?
+#attempt to fix
+#check that it did what you thought it did
+
+#fix 2 -- change data type of the 'date column'
+#what is the current data type? what does this look like in our data?
+#what function might you use to change it to a Date data type? What is a Date data type and how is it different from what we have now?
+#attempt to fix
+#check that it did what you thought it did
+
+# save all of your changes to a new object 
+
+
+# Smaller and easier dataset to clean
+# with excel dates the only major issue.
+clutch_size_cleaned <- clutch_size #%>%
+
+
+```
+
+## Let's save these datasets
+
+You will use this dataset in class on Wednesday, so save it somewhere it matters. 
+
+Oops! Did the data not save where expected? Remember to check your current working directory (where R will output by default) or to add a path to specify which directory (folder) you'd like R to put the dataset. 
+
+Again, this will be easier if this .Rmd is saved in a folder specific for this week's class
+
+```{r save tidy data}
+#export cleaned tortoise body condition
+write.table(tortoise_body_condition_cleaned, #name of dataframe
+            "cleaned_tortoiseBC.csv", #filename you want it to have
+            row.names = F, #does not add numerical row names, like the ...1 column we say in the uncleaned data
+            sep = ',', #makes the data comma delimited
+            col.names = T, #keeps column names that you have in your data
+            quote = F) #does not save character values as "value" -- keeps it as value
+
+#export cleaned clutch size
+write.table(clutch_size_cleaned, #name of dataframe
+            "cleaned_clutchSize.csv", #filename you want it to have
+            row.names = F, 
+            sep = ',', 
+            col.names = T, 
+            quote = F) 
+
+```
+
