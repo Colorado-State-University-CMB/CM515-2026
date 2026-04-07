@@ -12,19 +12,9 @@ Examples of markup languages include:
 - LaTex
 - Markdown (a "lightweight" markup language)
 
-For example, Figure \@ref(fig:htmlexample) some marked-up HTML code from CSU's website, while Figure \@ref(fig:renderedexample) shows how that file looks when it's rendered by a web browser. 
-
-```{r htmlexample, echo = FALSE, out.width = "\\textwidth", fig.align = "center", fig.cap = "Example of the source of an HTML file."}
-knitr::include_graphics("figures/example_html.png")
-```
-
-```{r renderedexample, echo = FALSE, out.width = "\\textwidth", fig.align = "center", fig.cap = "Example of a rendered HTML file."}
-knitr::include_graphics("figures/example_output.png")
-```
-
 To write a file in Markdown, you'll need to learn the conventions for creating formatting. This table shows what you would need to write in a flat file for some common formatting choices:
 
-```{r echo = FALSE}
+```r
 markdown_format <- data.frame(Code = c("`**text**`",
                                        "`*text*`",
                                        "`[text](www.google.com)`", 
