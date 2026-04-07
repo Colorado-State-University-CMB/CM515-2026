@@ -14,24 +14,12 @@ Examples of markup languages include:
 
 To write a file in Markdown, you'll need to learn the conventions for creating formatting. This table shows what you would need to write in a flat file for some common formatting choices:
 
-```r
-markdown_format <- data.frame(Code = c("`**text**`",
-                                       "`*text*`",
-                                       "`[text](www.google.com)`", 
-                                       "`# text`", 
-                                       "`## text`"),
-                              Rendering = c("**text**",
-                                            "*text*",
-                                            "[text](www.google.com)",
-                                            "",
-                                            ""),
-                              Explanation = c("boldface",
-                                              "italicized",
-                                              "hyperlink",
-                                              "first-level header",
-                                              "second-level header"))
-knitr::kable(markdown_format)
-```
+| Code | Rendering | Explanation |
+|:----:|:---------:|:-----------:|
+| `**text**` | **text** | boldface |
+| `*text*` | *text* | italicized |
+| `~~text~~` | ~~text~~ | strikethrough |
+| `[text](www.google.com)` | [text](www.google.com) |hyperlink |
 
 Some other simple things you can do in Markdown include:
 
@@ -40,18 +28,26 @@ Some other simple things you can do in Markdown include:
 - Tables
 - Figures from file
 - Block quotes
-- Superscripts
+- Super/subscripts
 
 For more Markdown conventions, see [RStudio's R Markdown Reference Guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf) (link also available through "Help" in RStudio). 
 
 ### Tables in R Markdown 
 
 If you want to create a nice, formatted table from an R dataframe, you can do that using `kable` from the `knitr` package. 
+Let's recreate the life expectancy table from earlier.  
 
-```{r}
-my_df <- data.frame(letters = c("a", "b", "c"),
-                    numbers = 1:3)
-kable(my_df)
+```r
+read.table("life-expectancy_1900-2023_CountriesOnly.csv", sep = ",", header = TRUE)
+lifeExp <- read.table("life-expectancy_1900-2023_CountriesOnly.csv", sep = ",", header = TRUE)
+lifeExp$Code <- as.factor(lifeExp$Code)
+lifeExpUS <- lifeExp[which((lifeExp$Code) == "USA"), ]
+```
+
+Now, we can use `kable()` to create a table.
+
+```r
+knitr::kable(lifeExp)
 ```
 
 There are a few options for the `kable` function:
