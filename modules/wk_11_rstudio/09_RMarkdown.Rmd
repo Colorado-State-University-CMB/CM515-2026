@@ -53,3 +53,44 @@ Some other simple things you can do in Markdown include:
 - Superscripts
 
 For more Markdown conventions, see [RStudio's R Markdown Reference Guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf) (link also available through "Help" in RStudio). 
+
+### Tables in R Markdown 
+
+If you want to create a nice, formatted table from an R dataframe, you can do that using `kable` from the `knitr` package. 
+
+```{r}
+my_df <- data.frame(letters = c("a", "b", "c"),
+                    numbers = 1:3)
+kable(my_df)
+```
+
+There are a few options for the `kable` function:
+
+```{r echo = FALSE, results = 'asis'}
+kable_opts <- data.frame(arg = c("`colnames`",
+                                 "`align`",
+                                 "`caption`",
+                                 "`digits`"),
+                         expl = c("Column names (default: column name in the dataframe)",
+                                  "A vector giving the alignment for each column ('l', 'c', 'r')",
+                                  "Table caption",
+                                  "Number of digits to round to. If you want to round columns different amounts, use a vector with one element for each column."))
+pander::pandoc.table(kable_opts, split.cells = c(10, 50),
+               justify = "rl", style = "multiline")
+```
+
+```{r}
+my.df <- data.frame(letters = c("a", "b", "c"),
+                numbers = rnorm(3))
+kable(my.df, digits = 2, align = c("r", "c"),
+      caption = "My new table", 
+      col.names = c("First 3 letters", 
+                    "First 3 numbers"))
+```
+
+From Yihui:
+
+>"**Want more features?** No, that is all I have. You should turn to other packages for help. I'm not
+going to reinvent their wheels."
+
+If you want to do fancier tables, you may want to explore the `xtable` and `pander` packages. As a note, these might both be more effective when compiling to pdf, rather than html.
