@@ -1,0 +1,55 @@
+## Markdown
+
+R Markdown files are mostly written using Markdown. To write R Markdown files, you need to understand what markup languages like Markdown are and how they work. 
+
+In Word and other word processing programs you have used, you can add formatting using buttons and keyboard shortcuts (e.g., "Ctrl-B" for bold). The file saves the words you type. It also saves the formatting, but you see the final output, rather than the formatting markup, when you edit the file (WYSIWYG -- what you see is what you get). 
+
+In markup languages, on the other hand, you markup the document directly to show what formatting the final version should have (e.g., you type `**bold**` in the file to end up with a document with **bold**).
+
+Examples of markup languages include:
+
+- HTML (HyperText Markup Language)
+- LaTex
+- Markdown (a "lightweight" markup language)
+
+For example, Figure \@ref(fig:htmlexample) some marked-up HTML code from CSU's website, while Figure \@ref(fig:renderedexample) shows how that file looks when it's rendered by a web browser. 
+
+```{r htmlexample, echo = FALSE, out.width = "\\textwidth", fig.align = "center", fig.cap = "Example of the source of an HTML file."}
+knitr::include_graphics("figures/example_html.png")
+```
+
+```{r renderedexample, echo = FALSE, out.width = "\\textwidth", fig.align = "center", fig.cap = "Example of a rendered HTML file."}
+knitr::include_graphics("figures/example_output.png")
+```
+
+To write a file in Markdown, you'll need to learn the conventions for creating formatting. This table shows what you would need to write in a flat file for some common formatting choices:
+
+```{r echo = FALSE}
+markdown_format <- data.frame(Code = c("`**text**`",
+                                       "`*text*`",
+                                       "`[text](www.google.com)`", 
+                                       "`# text`", 
+                                       "`## text`"),
+                              Rendering = c("**text**",
+                                            "*text*",
+                                            "[text](www.google.com)",
+                                            "",
+                                            ""),
+                              Explanation = c("boldface",
+                                              "italicized",
+                                              "hyperlink",
+                                              "first-level header",
+                                              "second-level header"))
+knitr::kable(markdown_format)
+```
+
+Some other simple things you can do in Markdown include:
+
+- Lists (ordered or bulleted)
+- Equations
+- Tables
+- Figures from file
+- Block quotes
+- Superscripts
+
+For more Markdown conventions, see [RStudio's R Markdown Reference Guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf) (link also available through "Help" in RStudio). 
