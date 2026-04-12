@@ -33,8 +33,8 @@ Welcome to CM 515! Course materials will be made available here and on Canvas. U
 | 12 | Wed Apr 15 | [TidyR and Pipes](https://github.com/Colorado-State-University-CMB/CM515-2026/tree/main/modules/wk_12_tidyr) | R/R Studio | Shady, Meg |
 | 13 | Mon Apr 20 | [ggplot & Data Visualization](https://github.com/Colorado-State-University-CMB/CM515-2026/tree/main/modules/wk_13_ggplot) | R/R Studio | Alex |
 | 13 | Wed Apr 22 | [ggplot & Data Visualization](https://github.com/Colorado-State-University-CMB/CM515-2026/tree/main/modules/wk_13_ggplot) | R/R Studio | Alex |
-| 14 | Mon Apr 27 | [Data Visualization (cont.)](https://github.com/Colorado-State-University-CMB/CM515-2026/tree/main/modules/wk_14_ggtree_circos) | R/R Studio | Dan Sloan |
-| 14 | Wed Apr 29 | [Data Visualization (cont.)](https://github.com/Colorado-State-University-CMB/CM515-2026/tree/main/modules/wk_14_ggtree_circos) | R/R Studio | Dan Sloan |
+| 14 | Mon Apr 27 | [Data Visualization (cont.)](https://github.com/Colorado-State-University-CMB/CM515-2026/tree/main/modules/wk_14_data_viz) | R/R Studio | Dan Sloan |
+| 14 | Wed Apr 29 | [Data Visualization (cont.)](https://github.com/Colorado-State-University-CMB/CM515-2026/tree/main/modules/wk_14_data_viz) | R/R Studio | Dan Sloan |
 | 15 | Mon May 4 | [Final Projects](https://github.com/Colorado-State-University-CMB/CM515-2026/tree/main/modules/final_projects) | N/A | N/A |
 | 15 | Wed May 6 | [Final Projects](https://github.com/Colorado-State-University-CMB/CM515-2026/tree/main/modules/final_projects) | N/A | N/A |
 | 16 | Mon May 11 | [Final Projects](https://github.com/Colorado-State-University-CMB/CM515-2026/tree/main/modules/final_projects) | N/A | N/A |
