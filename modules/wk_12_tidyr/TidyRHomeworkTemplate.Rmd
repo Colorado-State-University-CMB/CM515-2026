@@ -1,0 +1,80 @@
+---
+title: "TidyR_homework"
+author: "YOUR NAME HERE"
+date: "2026-03-31"
+output: pdf_document
+---
+
+## TidyR Homework
+
+In this assignment, you will be asked to select a dataset of your choice, identify any 'untidy' characteristics, make it tidy, and do some exploratory analysis. 
+
+## Question 1 (1 point)
+
+Select a dataset from https://github.com/rfordatascience/tidytuesday/tree/main/data and import it into RStudio. 
+
+If your dataset references a paper, like the one we did in class, you can download it from its data repository. If it is only found on the tidy tuesday github, you may need to use one of these functions:
+tidytuesdayR::tt_load 
+readr::read_csv
+
+Show me the first *10 rows* of your data (1 point).
+
+```{r Question 1}
+#load a dataset
+
+#output the first 10 rows of your data
+
+```
+
+## Question 2 (3 points)
+
+Identify at least 3 non-tidy characteristics of your data or things you would like to change in this dataset (1 point ea):
+
+* 1. 
+
+* 2. 
+
+* 3. 
+
+... [add more as needed]
+
+Show any code you used to identify these characteristics:
+
+```{r Q2}
+
+```
+
+## Question 3 (5 points)
+
+Fix each of your issues. Use comments to show where each of your issues listed above was fixed. Use pipes to connect fixing all of your issues together!
+
+```{r Q3}
+
+```
+
+## Question 4 (2 points)
+
+List a question you would like to answer using this dataset:
+
+
+
+## Question 5 (5 points)
+
+Using stats, plots, or both, answer your question. Make sure you output any stats or plots you create in this code chunk (i.e., that it shows up in the knitted document). 
+
+NOTE: you do not have to use a formal stats test if you are not familiar! Feel free to just use summary stats and/or figures to answer your question. 
+
+```{r Q5}
+
+```
+
+Provide the answer (in words) to your question below:
+
+
+## Question 6 (4 points)
+
+Find two functions we haven't introduced you to that are a part of tidyR, dplyr, or other related tidyverse packages. Provide the function name (including the package it's from) and what it does.
+
+
+
+

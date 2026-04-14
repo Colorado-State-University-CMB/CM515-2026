@@ -1,0 +1,136 @@
+---
+title: "TidyR-Day2"
+author: "Meg Hemmerlein"
+date: "2026-03-31"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+command + return / control + enter --> run a single line
+
+play button --> run all code in a code chunk
+
+triangle + line button --> run all previous code chunks
+
+```{r load data}
+
+```
+
+
+
+```{r Questions of Interest 1}
+#### Does it seem easier to recapture male or female tortoises?
+
+#### Let's plan out what we want
+# Which dataset should we use? 
+# Which variables? 
+# What do we actually need to do?
+# What functions should we use?
+
+```
+
+
+
+```{r Questions of Interest 2}
+#### Do recaptures happen more often in spring or summer?
+
+#### Let's plan out what we want
+# Which dataset should we use? 
+# Which variables? 
+# What do we actually need to do?
+# What functions should we use?
+
+# For one individual 
+
+# For all
+
+```
+
+
+
+```{r Question of Interest 3}
+
+#### Between the springs of 2009 and 2010, did the turtles grow differently based on locality?
+
+#### Let's plan out what we want
+# Which dataset should we use? 
+# Which variables? 
+# What do we actually need to do?
+# What functions should we use?
+
+```
+
+
+
+```{r Factor Relevel Example}
+
+mycolors <- c(
+  "Beach" = "gold",
+  "Konjsko" = "lightblue",
+  "Plateau" = "#72B000"
+)
+
+# Plot
+# Hmm that's okay, but I'd like the order to be different
+clutch_size %>%
+ggplot(aes(locality, eggs, fill = locality)) +
+  geom_boxplot(outlier.shape = NA) +
+  geom_jitter(width = 0.1, size = 3, alpha = 0.5) +
+  scale_fill_manual(values = mycolors)
+
+#ggsave("clutch.png", width = 8, height = 6, units = "in")
+
+#Check class of locality
+class(clutch_size$locality) 
+
+#Convert to factor
+clutch_size$locality = as.factor(clutch_size$locality) 
+
+#Check conversion
+class(clutch_size$locality) 
+
+#Check factor levels
+levels(clutch_size$locality)
+
+#Relevel factors
+clutch_size = clutch_size %>%
+  mutate(locality = fct_relevel(locality, "Beach", "Plateau", "Konjsko"))
+
+#Check factor levels
+levels(clutch_size$locality)
+
+#Plot
+clutch_size %>%
+ggplot(aes(locality, eggs, fill = locality)) +
+  geom_boxplot(outlier.shape = NA) +
+  geom_jitter(width = 0.1, size = 3, alpha = 0.5) +
+  scale_fill_manual(values = mycolors)
+
+#ggsave("clutch_relevel.png", width = 8, height = 6, units = "in")
+
+clutch_size = clutch_size %>%
+  mutate(locality = fct_recode(locality,
+                               "SunnyBeach" = "Beach",
+                               "ScaryPlateau" = "Plateau", 
+                               "CoolKonjsko" = "Konjsko"))
+mycolors2 <- c(
+  "SunnyBeach" = "gold",
+  "CoolKonjsko" = "lightblue",
+  "ScaryPlateau" = "#72B000"
+)
+
+clutch_size %>%
+ggplot(aes(locality, eggs, fill = locality)) +
+  geom_boxplot(outlier.shape = NA) +
+  geom_jitter(width = 0.1, size = 3, alpha = 0.5) +
+  scale_fill_manual(values = mycolors2)
+
+#ggsave("clutch_recode.png", width = 8, height = 6, units = "in")
+
+```
+
