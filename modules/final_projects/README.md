@@ -108,7 +108,7 @@ Write code in any subset of languages we've covered in class (Bash, Python, R) t
     * What outputs (figures/tables/statistics) a user can expect
 * Additional writeup that includes (this can be included in the README, or in a separate document):
     * A summary of your thought process when designing your pipeline, including the answers to the above questions in "How to define the scope of a pipeline"
-    * A consideration of the limitaions of your pipeline (e.g. input file format, amount of data needed, limitations of the tools you utilize, run time of the pipeline, etc.)
+    * A consideration of the limitations of your pipeline (e.g. input file format, amount of data needed, limitations of the tools you utilize, run time of the pipeline, etc.)
     * A description of your experience creating a pipeline - what was challenging, what was easy, how well does it streamline the analysis of the data?
     * References to any papers that may have helped inspire your pipeline
     * References for any published bioinformatics tools/packages you used!
